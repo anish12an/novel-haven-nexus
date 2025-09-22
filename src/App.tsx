@@ -6,10 +6,16 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "@/components/Header";
 import Home from "./pages/Home";
 import Browse from "./pages/Browse";
+import Trending from "./pages/Trending";
+import Genres from "./pages/Genres";
+import Write from "./pages/Write";
+import Library from "./pages/Library";
+import Settings from "./pages/Settings";
 import NovelDetails from "./pages/NovelDetails";
 import Reader from "./pages/Reader";
 import Login from "./pages/auth/Login";
 import Signup from "./pages/auth/Signup";
+import ForgotPassword from "./pages/auth/ForgotPassword";
 import Profile from "./pages/Profile";
 import AuthorDashboard from "./pages/AuthorDashboard";
 import NotFound from "./pages/NotFound";
@@ -27,10 +33,16 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/browse" element={<Browse />} />
+            <Route path="/trending" element={<Trending />} />
+            <Route path="/genres" element={<Genres />} />
+            <Route path="/write" element={<Write />} />
+            <Route path="/library" element={<Library />} />
+            <Route path="/settings" element={<Settings />} />
             <Route path="/novel/:id" element={<NovelDetails />} />
             <Route path="/read/:id/chapter/:chapter" element={<Reader />} />
             <Route path="/auth/login" element={<Login />} />
             <Route path="/auth/signup" element={<Signup />} />
+            <Route path="/auth/forgot-password" element={<ForgotPassword />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/dashboard" element={<AuthorDashboard />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
